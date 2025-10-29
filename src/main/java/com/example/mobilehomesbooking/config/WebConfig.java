@@ -14,9 +14,14 @@ public class WebConfig {
             @Override
             public void addCorsMappings(CorsRegistry registry) {
                 registry.addMapping("/**")
-                        .allowedOrigins("http://localhost:3000") // tvoj frontend
+                        .allowedOrigins(
+                                "http://localhost:3000",
+                                "https://mobilehomes-frontend.vercel.app",  // 👈 tvoj frontend
+                                "https://mobilehomes-frontend.onrender.com" // ako si deployao i tamo
+                        )
                         .allowedMethods("GET", "POST", "PUT", "DELETE", "OPTIONS")
-                        .allowedHeaders("*");
+                        .allowedHeaders("*")
+                        .allowCredentials(true);
             }
         };
     }
