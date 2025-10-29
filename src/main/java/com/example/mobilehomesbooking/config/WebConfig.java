@@ -16,8 +16,7 @@ public class WebConfig {
                 registry.addMapping("/**")
                         .allowedOrigins(
                                 "http://localhost:3000",
-                                "https://mobilehomes-frontend.vercel.app",  // 👈 tvoj frontend
-                                "https://mobilehomes-frontend.onrender.com" // ako si deployao i tamo
+                                "https://mobilehomes-app.vercel.app/" // 👈 tvoj frontend
                         )
                         .allowedMethods("GET", "POST", "PUT", "DELETE", "OPTIONS")
                         .allowedHeaders("*")
