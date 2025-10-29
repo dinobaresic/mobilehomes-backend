@@ -12,12 +12,5 @@ public class MobileHomesBookingApplication {
         SpringApplication.run(MobileHomesBookingApplication.class, args);
     }
 
-    @RestController
-    class TestController {
-        @GetMapping("/hello")
-        public String hello() {
-            return "✅ Backend radi bez greske!";
-        }
 
-    }
 }
